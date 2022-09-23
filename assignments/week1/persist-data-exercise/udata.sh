@@ -1,20 +1,15 @@
-#!/bin/bash/
-
-exec < ${1}
-read header
+#!/bin/bash
 
 while IFS="," read -r fname lname email usr pwd
 do
   echo
   echo $fname $lname $email $usr $pwd
   echo "+---------------------------------+"
-done
-
-while true; do
+done < MOCK_DATA.csv
 
 read -p "Enter new data? Y/N: " YN
 
-if [[ "$YN" == "Y" ]]
+if [ "$YN" == "Y" ]
 then
   read -p "input First Name: " fname1 ;
   read -p "input Last Name: " lname1 ;
@@ -24,9 +19,8 @@ then
   echo "$fname1,$lname1,$email1,$usr1,$pwd1" >> MOCK_DATA.csv ;
   echo "New entry added to file." ;
 
-elif [[ "$YN" == "N" ]]
+elif [ "$YN" == "N" ]
 then
   exit 0 ;
 fi
 
-done
