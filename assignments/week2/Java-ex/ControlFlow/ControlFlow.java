@@ -65,7 +65,10 @@ public class ControlFlow{
     public static String echo(String word, int times){
 
         // logic
-
+        String echo = word;
+        int i = times;
+        echo.repeat(word, i);
+        return System.out.println(echo.repeat(word, i));
     }
 
     /*
@@ -75,8 +78,8 @@ public class ControlFlow{
         
         // logic
 	if (s.length() % 2 == 0) { boolean result = true; }
-	else { boolean result = false; }
-        return result;
+
+    return false;
     }
 
     /*
