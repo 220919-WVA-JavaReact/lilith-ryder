@@ -1,0 +1,18 @@
+table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td,th {
+    padding: 2em;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.true:hover{
+    background-color: green;
+}
+
+.false:hover{
+    background-color: red;
+}
